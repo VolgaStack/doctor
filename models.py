@@ -15,6 +15,7 @@ class Doctor(models.Model):
 class Appointment(models.Model):
     appointment_date = models.DateTimeField('date of appointment')
     doctor = models.ForeignKey(Doctor)
+    client_name = models.CharField(max_length=200)
 
     def __str__(self):
         return 'time: {0} doctor: {1}'.format(self.appointment_date, self.doctor)
