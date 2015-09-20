@@ -19,4 +19,4 @@ class Appointment(models.Model):
     client_name = models.CharField(max_length=200)
 
     def __str__(self):
-        return 'Дата и время: {0}/n врач: {1}'.format(self.app_date, self.doctor)
+        return 'Дата и время: {0} врач: {1}'.format(self.app_date, self.doctor)

@@ -1,0 +1,27 @@
+{% extends 'doctor/base.html' %}
+
+{% block extrahead %}
+{% load static from staticfiles %}
+<link href="{% static "jquery/datetimepicker/jquery.datetimepicker.css" %}" rel="stylesheet">
+<script src="{% static "jquery/datetimepicker/jquery.js" %}" type="text/javascript"></script>
+<script src="{% static "jquery/datetimepicker/jquery.datetimepicker.js" %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block jquery %}
+$("#id_date_time").datetimepicker({
+  minDate:0,
+  minTime:'9:00',
+  maxTime:'18:00',
+  dayOfWeekStart:1,
+  format:'d.m.Y H:i',
+  lang:'ru'
+});
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br><input type="submit" value="Submit" />
+</form>
+{% endblock %}
