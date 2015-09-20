@@ -1,5 +1,5 @@
 from django import forms
-from .models import Doctor, Appointment
+from .models import Doctor
 
 DATE_FORMATS = [
 '%Y-%m-%d %H:%M:%S',    # '2006-10-25 14:30:59'
