@@ -1,7 +1,7 @@
 import datetime
 
 WHS = datetime.time(9,0)
-WHEND = datetime.time(17,0)
+WHEND = datetime.time(18,0)
 TIME = datetime.timedelta(hours=1)
 
 

@@ -17,4 +17,3 @@ class AppointmentForm(forms.Form):
     name = forms.CharField(label='ФИО', max_length=200,)
     date_time = forms.DateTimeField(label='Дата и время:', input_formats=DATE_FORMATS)
     doctor = forms.ModelChoiceField(label='Врач:',queryset=Doctor.objects.all())
-    
